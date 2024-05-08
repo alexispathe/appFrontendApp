@@ -1,5 +1,54 @@
 *{
-    width: 100;
     padding: 0;
+    margin: 0;
     font-family: "Roboto", sans-serif;
 }
+.container{
+    width: 100%;
+}
+/* Comienzan los estilos para el logo */
+.header{
+    width: 100%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header_logo{
+    width:300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.header_logo img{
+    margin: 0 auto;
+    width: 200px;
+    height: 100%;
+}
+
+/* Fin de los estilos del logo */
+/* Comienzan los estilos para las categorias en el header*/
+.header_categories_container{
+    flex: 1;
+}
+.header_categories ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header_categories ul li{
+    list-style: none;
+}
+.header_categories ul a {
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    margin: 0px 20px;
+}
+.header_categories ul a:hover {
+    color:gold;
+}
+/* Fin de estilos categorias en el header */
