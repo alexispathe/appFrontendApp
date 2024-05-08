@@ -15,7 +15,7 @@ const getCharacters = async () => {
 const createCharacterCard = async () => {
     try {
         const characters = await getCharacters();
-        const characterContainer = document.querySelector('.section_characters');
+        const characterContainer = document.querySelector('.section_characters_container');
         const characterFragment = document.createDocumentFragment();
 
         characters.results.forEach((characterData) => {
@@ -30,16 +30,30 @@ const createCharacterCard = async () => {
                         <p class="info_name">Nombre: ${characterData.name}</p>
                     </div>
                 <div class="info_description_container">
-                    <p class="info_description">Genero: Hombre</p>
-                    <p class="info_description">Especie: Alien</p>
+                    <p class="info_description">Genero: ${characterData.gender}</p>
+                    <p class="info_description">Especie: ${characterData.species}</p>
+                </div>
+                <div class="addList">
+                    <p>Agrgar a favoritos</p>
                 </div>
             </div> `
             characterFragment.appendChild(character);
         });
 
         characterContainer.appendChild(characterFragment);
+        addList();
+
     } catch (error) {
         console.log("Ocurrió un error: ", error);
     }
+}
+// Funcion para agregar a la lista de favoritos
+const addList = async()=>{
+    const addListElements = Array.from(document.querySelectorAll('.addList'));
+    addListElements.forEach((element, i) => {
+      element.addEventListener('click', ()=>{
+        console.log("Click ", i)
+      })
+      });
 }
 createCharacterCard()
