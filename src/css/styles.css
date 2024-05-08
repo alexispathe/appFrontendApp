@@ -14,6 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: fixed;
 }
 .header_logo{
     width:300px;
@@ -52,3 +53,36 @@
     color:gold;
 }
 /* Fin de estilos categorias en el header */
+/* Comienzan los estilos de la seccion del buscador */
+.section_search_container{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.form_search_contaienr{
+    width: 40%;
+    position: relative;
+}
+.section_search_container input[type="search"]{
+    width: 100%;
+    height: 50px;
+    padding: 0px 40px;
+    border: none;
+    outline: 0;
+    border-bottom: 4px solid rgb(0, 128, 255);
+    font-size: 20px;
+}
+.search_icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+  }
+
+/* Fin de los estilos del buscador */
