@@ -1,107 +1,150 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
-.container{
-    width: 100%;
+.container {
+  width: 100%;
 }
 /* Comienzan los estilos para el logo */
-.header{
-    width: 100%;
-    height: 75px;
-    background-color: rgba(0, 0, 0, 0.911);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: fixed;
-    z-index: 10;
+.header {
+  width: 100%;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.911);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
 }
-.header_logo{
-    width:300px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-
-
+.header_logo {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
 }
-.header_logo img{
-    margin: 0 auto;
-    width: 200px;
-    height: 100%;
+.header_logo img {
+  margin: 0 auto;
+  width: 200px;
+  height: 100%;
 }
 
 /* Fin de los estilos del logo */
 /* Comienzan los estilos para las categorias en el header*/
-.header_categories_container{
-    flex: 1;
+.header_categories_container {
+  flex: 1;
 }
-.header_categories ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.header_categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.header_categories ul li{
-    list-style: none;
+.header_categories ul li {
+  list-style: none;
 }
 .header_categories ul a {
-    text-decoration: none;
-    color:white;
-    font-size: 20px;
-    margin: 0px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 0px 20px;
 }
 .header_categories ul a:hover {
-    color:gold;
+  color: gold;
 }
 /* Fin de estilos categorias en el header */
 /* Comienzan los estilos de la seccion del buscador */
-.section_search_container{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-
+.section_search_container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
 }
-.form_search_contaienr{
-    width: 40%;
-    position: relative;
+.form_search_contaienr {
+  width: 40%;
+  position: relative;
 }
-.section_search_container input[type="search"]{
-    width: 100%;
-    height: 50px;
-    padding: 0px 40px;
-    border: none;
-    outline: 0;
-    border-bottom: 4px solid rgb(0, 128, 255);
-    font-size: 20px;
+.section_search_container input[type="search"] {
+  width: 100%;
+  height: 50px;
+  padding: 0px 40px;
+  border: none;
+  outline: 0;
+  border-bottom: 4px solid rgb(0, 128, 255);
+  font-size: 20px;
 }
 .search_icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: gray;
-    cursor: pointer;
-  }
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: gray;
+  cursor: pointer;
+}
 
 /* Fin de los estilos del buscador */
 /* Estilos de los personajes */
-.section_characters_container{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.section_container{
+    padding-top: 100px;
 }
-.section_characters_container .character{
-    margin: 50px 10px;
+.section_characters_container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.character img:hover{
-    cursor: pointer;
+.section_characters_container .character {
+  margin: 50px 10px;
 }
-.addList{
-    cursor: pointer;
+.character img:hover {
+  cursor: pointer;
+}
+.addList {
+  cursor: pointer;
 }
 /* Fin de los estilos de los personajes */
+
+/* Estilos del formulario para crear */
+.form-container{
+    padding-top: 100px;
+}
+.form-container h1 {
+  text-align: center;
+}
+
+.form-container form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-container .input-field,
+.form-container .select-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container .submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.form-container .submit-button:hover {
+  background-color: #45a049;
+}
+/* fin */

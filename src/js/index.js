@@ -33,7 +33,7 @@ const createCharacterCard = async () => {
                     <p class="info_description">Genero: ${characterData.gender}</p>
                     <p class="info_description">Especie: ${characterData.species}</p>
                 </div>
-                <div class="addList">
+                <div class="addList" data-character-id="${characterData.id}">
                     <p>Agrgar a favoritos</p>
                 </div>
             </div> `
@@ -48,12 +48,20 @@ const createCharacterCard = async () => {
     }
 }
 // Funcion para agregar a la lista de favoritos
-const addList = async()=>{
+const addList = async () => {
     const addListElements = Array.from(document.querySelectorAll('.addList'));
     addListElements.forEach((element, i) => {
-      element.addEventListener('click', ()=>{
-        console.log("Click ", i)
-      })
-      });
+        element.addEventListener('click', () => {
+            fetch('http://localhost:4000/api/guardar-personaje-favorito', {
+                method: 'POST',
+                mode: 'cors', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify( {personajeID: element.getAttribute('data-character-id') })
+            })
+         })
+    });
 }
+
 createCharacterCard()
